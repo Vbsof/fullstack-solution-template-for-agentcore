@@ -1,0 +1,42 @@
+apiVersion: genai.standardbank.com/v1alpha1
+kind: Blueprint
+
+metadata:
+  name: blueprint-sandbox
+  title: "Blueprint Sandbox"
+  description: >-
+    Test fixture for the GenAI Enterprise Hub blueprint discovery pipeline.
+    Not a real blueprint — deploying this does nothing useful. It exists so
+    the Hub has a valid catalog-info.yaml to parse end-to-end while real
+    blueprints are still being authored.
+
+  version: "0.1.0"
+
+  owner: genai-hub-platform
+  maintainers:
+    - name: "Damian Kuroczko"
+      email: "damian.kuroczko@standardbank.co.za"
+      github: "damian.kuroczko@standardbank.co.za"
+
+  tags:
+    - sandbox
+    - test-fixture
+  category: Uncategorised
+  subcategory: "Test Fixtures"
+
+  lifecycle: alpha
+  maturity: experimental
+
+  links:
+    repository: "https://github.com/standardbank-ppb-automation-engineering/Blueprint-Sandbox-repo"
+
+spec:
+  type: pattern
+
+  awsServices:
+    - service: "Amazon S3"
+      purpose: "Placeholder — no real AWS usage."
+
+  architecture:
+    pattern: "None — test fixture only"
+    deployment: serverless
